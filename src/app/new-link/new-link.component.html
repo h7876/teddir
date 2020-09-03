@@ -8,10 +8,11 @@
     </div>
     <div class="field">
       <label for="link">Link:</label>
-      <input name="link">
+      <input (keyup)="addLink($event)">
     </div>
-    <button (click)="onClickMe()">Cancel</button>
   </form>
+  <button (click)="onClickMe()">Cancel</button>
+  <button (click)="sendLink()">Save</button>
 </div>
 <ng-template #newLink>
   <button (click)="onClickMe()">Submit a new link</button>

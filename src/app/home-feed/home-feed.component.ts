@@ -6,13 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-feed.component.css']
 })
 export class HomeFeedComponent implements OnInit {
+  title = 'no';
   links: string[];
 
+//Need to make this an array, and implement the title with the link. 
   constructor() { 
-    this.links = ['Link 1', 'Link 2', 'Link 3', 'Link 4']
+    this.links = []
   }
 
   ngOnInit(): void {
+  }
+
+  receiveNewLink(event){
+    let clone = [...this.links]
+    clone.push(event)
+    this.links = clone
   }
 
 }

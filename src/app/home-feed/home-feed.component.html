@@ -1,4 +1,4 @@
 <ul>
     <li *ngFor="let link of links">{{ link }}</li>
 </ul>
-<app-new-link></app-new-link>
+<app-new-link (linkEvent)="receiveNewLink($event)"></app-new-link>
