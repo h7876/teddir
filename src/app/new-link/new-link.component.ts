@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-link.component.css']
 })
 export class NewLinkComponent implements OnInit {
-
-  constructor() { }
+  displayForm: boolean;
+    
+  constructor() { 
+    this.displayForm = false;
+  }
 
   ngOnInit(): void {
   }
-
+  
+  onClickMe(){
+    this.displayForm = !this.displayForm;
+  }
 }
