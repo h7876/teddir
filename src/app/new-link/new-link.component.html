@@ -4,14 +4,15 @@
     <h3 class="new post header">New Link</h3>
     <div class="new post field">
       <label for="title">An interesting title:</label>
-        <input name="title">
+      <input name="title">
     </div>
     <div class="field">
       <label for="link">Link:</label>
-        <input name="link"> 
+      <input name="link">
     </div>
+    <button (click)="onClickMe()">Cancel</button>
   </form>
 </div>
-  <ng-template #newLink>
-   <button (click)="onClickMe()">Submit a new link</button>
-  </ng-template>
+<ng-template #newLink>
+  <button (click)="onClickMe()">Submit a new link</button>
+</ng-template>
