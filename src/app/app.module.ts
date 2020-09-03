@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NewLinkComponent } from './new-link/new-link.component';
+import { HomeFeedComponent } from './home-feed/home-feed.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewLinkComponent
+    NewLinkComponent,
+    HomeFeedComponent
   ],
   imports: [
     BrowserModule
