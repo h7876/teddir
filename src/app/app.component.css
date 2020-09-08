@@ -1,0 +1,19 @@
+
+.topbar {
+    height: 55px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0px; 
+    left: 0px;
+}
+.topbar h1  {
+    color: white;
+    position: absolute;
+    padding-left: 5px;
+    font-size: 25px;
+    font-family: 'Grandstander', cursive;
+}
+
+
+
