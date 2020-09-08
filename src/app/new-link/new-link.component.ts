@@ -7,12 +7,16 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 })
 export class NewLinkComponent implements OnInit {
   displayForm: boolean;
-  @Output() linkEvent = new EventEmitter<string>();
-  @Input() newLink: string;
+  @Output() linkEvent = new EventEmitter<object[]>();
+  newLink: object[]=[];
+  @Input() link: string;
+  @Input() title: string;
 
   constructor() { 
-    this.displayForm = false;
-    this.newLink = ''
+    this.displayForm = false
+    this.newLink = []
+    this.link = ''
+    this.title = ''
   }
 
   ngOnInit(): void {
@@ -24,9 +28,19 @@ export class NewLinkComponent implements OnInit {
 
   addLink(event){
     console.log(event.target.value)
-    this.newLink = event.target.value
+    this.link = event.target.value
   }
+  addTitle(event){
+    console.log(event.target.value)
+    this.title = event.target.value
+  }
+
   sendLink(){
+    let newLinkObj = {
+      link:this.link,
+      title: this.title
+    }
+    this.newLink.push(newLinkObj)
     this.linkEvent.emit(this.newLink)
     this.displayForm = !this.displayForm;
   }

@@ -1,4 +1,7 @@
-<ul>
-    <li *ngFor="let link of links">{{ link }}</li>
-</ul>
+<div *ngFor="let link of posts">
+  <h1> {{ link.title }}</h1>  
+  <p>{{ link.link }}</p>   
+    
+</div>
+
 <app-new-link (linkEvent)="receiveNewLink($event)"></app-new-link>
