@@ -1,19 +1,17 @@
-<div *ngIf="displayForm; else newLink">
+<div class=addnewpostform *ngIf="displayForm; else newLink">
+  <div class=container>
+    <h3 class="newpostheader">New Link</h3>
+    <form class="newpostform">
+      <input placeholder="An Interesting Title..." (keyup)="addTitle($event)">
+      <input placeholder="Link" (keyup)="addLink($event)">
+    </form>
 
-  <form class="new post form">
-    <h3 class="new post header">New Link</h3>
-    <div class="new post field">
-      <label for="title">An interesting title:</label>
-      <input (keyup)="addTitle($event)">
+    <div id=submitorcancel>
+      <button id="cancel" (click)="onClickMe()">Cancel</button>
+      <button id="save" (click)="sendLink()">Save</button>
     </div>
-    <div class="field">
-      <label for="link">Link:</label>
-      <input (keyup)="addLink($event)">
-    </div>
-  </form>
-  <button (click)="onClickMe()">Cancel</button>
-  <button (click)="sendLink()">Save</button>
+  </div>
 </div>
 <ng-template #newLink>
-  <button (click)="onClickMe()">Submit a new link</button>
+  <button (click)="onClickMe()" id="newpost">Submit a New Link</button>
 </ng-template>
