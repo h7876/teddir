@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {SvgArrowsComponent} from '../svg-arrows/svg-arrows.component'
 
 @Component({
   selector: 'app-home-feed',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-feed.component.css']
 })
 export class HomeFeedComponent implements OnInit {
-  
+  @ViewChild(SvgArrowsComponent) child: SvgArrowsComponent;
   posts: object[];
 
   constructor() { 
@@ -22,19 +23,19 @@ export class HomeFeedComponent implements OnInit {
     this.posts = clone
     console.log(this.posts)
   }
-   upArrow(i) {
-    console.log(i)
-    if(this.posts[i]['liked'] == false){
-      document.getElementById(`${i}`).style.fill = "red";
-      this.posts[i]['liked'] = true;
-    }
-       else if(this.posts[i]['liked'] == true){
-      document.getElementById(`${i}`).style.fill = "black";
-      this.posts[i]['liked'] = false;
-    }
-    else {
-      alert(this.posts)
-    }
+//    upArrow(i) {
+//     console.log(i)
+//     if(this.posts[i]['liked'] == false){
+//       document.getElementById(`${i}`).style.fill = "red";
+//       this.posts[i]['liked'] = true;
+//     }
+//        else if(this.posts[i]['liked'] == true){
+//       document.getElementById(`${i}`).style.fill = "black";
+//       this.posts[i]['liked'] = false;
+//     }
+//     else {
+//       alert(this.posts)
+//     }
     
-}
+// }
 }

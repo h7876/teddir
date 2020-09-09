@@ -1,11 +1,11 @@
 <div class=postwaterfall>
-<div class=post *ngFor="let link of posts; index as i" >
-  <button (click)="upArrow(i)">
-  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="266.8629439676699 200.30505710909836 43.9347471270454 60.574445410498186" width="20" height="28.33"><defs><path d="M307.8 228.76L287.83 201.31L267.86 228.76L280.52 228.76L280.52 257.88L295.17 257.88L295.17 228.76L307.8 228.76Z" id="upArrow"></path></defs><g><g><use xlink:href="#upArrow" opacity="1" fill-opacity="1"></use></g></g></svg>
-</button>
-  <h1 class=title> {{ link.title }}</h1>  
-  <p class=content>{{ link.link }}</p>   
-    
-</div>
+  <div class=post *ngFor="let link of posts; index as i">
+
+    <app-svg-arrows></app-svg-arrows>
+
+    <h1 class=title> {{ link.title }}</h1>
+    <p class=content>{{ link.link }}</p>
+
+  </div>
 </div>
 <app-new-link (linkEvent)="receiveNewLink($event)"></app-new-link>
