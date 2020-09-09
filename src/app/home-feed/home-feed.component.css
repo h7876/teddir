@@ -12,13 +12,19 @@
 .title {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-top:10px;
+    /* padding-top:10px; */
+    margin: 0px;
+    position: relative;
+    bottom: 20px;
 }
 
 .content {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-bottom: 10px;
+    margin: 5px;
+    position: relative;
+    bottom: 10px;
 }
 
 .post {
@@ -27,10 +33,12 @@
     width: auto;
     border-radius: 4px;
     padding-left: 40px;
+   
+    
 }
 
-button {
-    border: none;
-    background: none;
-    cursor: pointer;
+.arrows {
+    position: relative;
+    right: 30px;
+    top: 18px;
 }
