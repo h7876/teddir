@@ -25,7 +25,7 @@ h3 {
 }
 
 .addnewpostform {
-    width: 600px;
+    width: 700px;
     top: 100px;
     position: absolute;
     left: 50%;
@@ -33,6 +33,7 @@ h3 {
     background-color: #303030;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 3;
 
 }
 
