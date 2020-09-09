@@ -11,12 +11,14 @@ export class NewLinkComponent implements OnInit {
   newLink: object[]=[];
   @Input() link: string;
   @Input() title: string;
+  liked: boolean;
 
   constructor() { 
     this.displayForm = false
     this.newLink = []
     this.link = ''
     this.title = ''
+    this.liked = false
   }
 
   ngOnInit(): void {
@@ -38,7 +40,8 @@ export class NewLinkComponent implements OnInit {
   sendLink(){
     let newLinkObj = {
       link:this.link,
-      title: this.title
+      title: this.title,
+      liked: this.liked
     }
     this.newLink.push(newLinkObj)
     this.linkEvent.emit(this.newLink)

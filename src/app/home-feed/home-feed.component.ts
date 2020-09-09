@@ -10,7 +10,7 @@ export class HomeFeedComponent implements OnInit {
   posts: object[];
 
   constructor() { 
-    this.posts = []
+    this.posts = [{title:'hi', link: 'no', liked:false}]
   }
 
   ngOnInit(): void {
@@ -22,5 +22,19 @@ export class HomeFeedComponent implements OnInit {
     this.posts = clone
     console.log(this.posts)
   }
-
+   upArrow(i) {
+    console.log(i)
+    if(this.posts[i]['liked'] == false){
+      document.getElementById(`${i}`).style.fill = "red";
+      this.posts[i]['liked'] = true;
+    }
+       else if(this.posts[i]['liked'] == true){
+      document.getElementById(`${i}`).style.fill = "black";
+      this.posts[i]['liked'] = false;
+    }
+    else {
+      alert(this.posts)
+    }
+    
+}
 }
