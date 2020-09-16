@@ -8,16 +8,41 @@ import { Component, OnInit } from '@angular/core';
 export class SvgArrowsComponent  {
 
   liked = false
-  fillColor = 'black'
+  disliked = false
+  fillColorUpArrow = 'black'
+  fillColorDownArrow = 'black'
 
-  changeColor() {
-    if (this.liked == false) {
-      this.fillColor = "#f49053"
-      this.liked = true;
+  changeColorUpArrow() {
+    if (this.liked == false && this.disliked == false) {
+      this.fillColorUpArrow = "#f49053"
+      this.liked = true
     }
-    else if (this.liked == true) {
-      this.fillColor = "black"
-      this.liked = false;
+    else if (this.liked == true && this.disliked == false) {
+      this.fillColorUpArrow = "black"
+      this.liked = false
+    }
+    else if (this.liked == false && this.disliked == true){
+      this.fillColorDownArrow = "black"
+      this.fillColorUpArrow = "#f49053"
+      this.liked = true
+      this.disliked = false
+    }
+  }
+  changeColorDownArrow() {
+    if (this.disliked == false && this.liked == false) {
+      this.fillColorDownArrow = "#6A88F9"
+      this.disliked = true
+      this.fillColorUpArrow = "black"
+    }
+    else if (this.disliked == true && this.liked == false) {
+      this.fillColorDownArrow = "black"
+      this.disliked = false
+    }
+    else if (this.disliked == false && this.liked == true){
+      this.fillColorUpArrow = "black"
+      this.fillColorDownArrow = "#6A88F9"
+      this.disliked = true
+      this.liked = false
     }
   }
 }

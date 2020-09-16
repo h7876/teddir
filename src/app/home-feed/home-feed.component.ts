@@ -11,7 +11,7 @@ export class HomeFeedComponent implements OnInit {
   posts: object[];
 
   constructor() { 
-    this.posts = [{title:'hi', link: 'no', liked:false}]
+    this.posts = [{title:'hi', link: 'no', liked:false, dislike:false}]
   }
 
   ngOnInit(): void {

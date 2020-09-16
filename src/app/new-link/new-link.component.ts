@@ -12,6 +12,7 @@ export class NewLinkComponent implements OnInit {
   @Input() link: string;
   @Input() title: string;
   liked: boolean;
+  disliked: boolean;
 
   constructor() { 
     this.displayForm = false
@@ -19,6 +20,7 @@ export class NewLinkComponent implements OnInit {
     this.link = ''
     this.title = ''
     this.liked = false
+    this.disliked = false
   }
 
   ngOnInit(): void {
@@ -41,7 +43,8 @@ export class NewLinkComponent implements OnInit {
     let newLinkObj = {
       link:this.link,
       title: this.title,
-      liked: this.liked
+      liked: this.liked,
+      disliked: this.disliked
     }
     this.newLink.push(newLinkObj)
     this.linkEvent.emit(this.newLink)
