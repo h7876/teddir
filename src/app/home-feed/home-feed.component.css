@@ -13,10 +13,10 @@
 .title {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* padding-top:10px; */
     margin: 0px;
-    position: relative;
+    position: absolute;
     bottom: 20px;
+    top: 5px;
 }
 
 .content {
@@ -34,12 +34,11 @@
     width: auto;
     border-radius: 4px;
     padding-left: 40px;
-   
-    
+    position: relative;
+    top: 0px;
 }
 
 .arrows {
     position: relative;
     right: 30px;
-    top: 18px;
 }
