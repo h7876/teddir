@@ -1,19 +1,15 @@
-<!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="266.8629439676699 200.30505710909836 43.9347471270454 60.574445410498186" width="20" height="28.33"><defs><path d="M307.8 228.76L287.83 201.31L267.86 228.76L280.52 228.76L280.52 257.88L295.17 257.88L295.17 228.76L307.8 228.76Z" id="ajpoqahzh"></path></defs>
-<g>
-<g>
-<use xlink:href="#ajpoqahzh" opacity="1" [attr.fill]="fillColor" (click)="changeColor()" fill-opacity="1"> 
-</use></g></g></svg> -->
-
-
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="281.0032206360263 221.8 88.79677936397366 113.03905309593443" width="40" height="56.66"><defs><path d="M366.8 241.2L366.8 232L366.8 222.8L366.8 228.63L366.8 228.63L366.8 235.38L366.8 235.38L366.8 241.2Z" id="b32bhifFOF"></path><path d="M323.62 254.53L302.91 233.84L282 254.31L295.19 254.38L295.08 276.2L310.35 276.28L310.46 254.46L323.62 254.53Z" id="f1SQWFrZQG"></path><path d="M282 311.06L302.62 331.84L323.62 311.46L310.43 311.34L310.63 289.51L295.36 289.37L295.16 311.19L282 311.06Z" id="bpyxSVWS5"></path></defs>
-<g>
-<g>
-<use xlink:href="#f1SQWFrZQG" opacity="1" [attr.fill]="fillColorUpArrow" (click)="changeColorUpArrow()"  fill-opacity="1">
-</use>
-</g>
-<g>
-<use xlink:href="#bpyxSVWS5" opacity="1" [attr.fill]="fillColorDownArrow" (click)="changeColorDownArrow()" fill-opacity="1">
-</use>
-</g>
-</g>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="281.0032206360263 221.8 88.79677936397366 113.03905309593443" width="40" height="56.66">
+    <defs>
+        <path d="M366.8 241.2L366.8 232L366.8 222.8L366.8 228.63L366.8 228.63L366.8 235.38L366.8 235.38L366.8 241.2Z" id="b32bhifFOF"></path>
+        <path d="M323.62 254.53L302.91 233.84L282 254.31L295.19 254.38L295.08 276.2L310.35 276.28L310.46 254.46L323.62 254.53Z" id="f1SQWFrZQG"></path>
+        <path d="M282 311.06L302.62 331.84L323.62 311.46L310.43 311.34L310.63 289.51L295.36 289.37L295.16 311.19L282 311.06Z" id="bpyxSVWS5"></path>
+    </defs>
+    <g>
+        <g>
+            <use xlink:href="#f1SQWFrZQG" opacity="1" [attr.fill]="fillColorUpArrow" (click)="changeColorUpArrow()"  fill-opacity="1"></use>
+        </g>
+        <g>
+            <use xlink:href="#bpyxSVWS5" opacity="1" [attr.fill]="fillColorDownArrow" (click)="changeColorDownArrow()" fill-opacity="1"></use>
+        </g>
+    </g>
 </svg>
